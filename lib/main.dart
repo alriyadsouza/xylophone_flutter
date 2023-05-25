@@ -5,7 +5,14 @@ void main() => runApp(const XylophoneApp());
 
 class XylophoneApp extends StatelessWidget {
   const XylophoneApp({super.key});
+  void soundButton(int Sound)
+  {
+    final assetsAudioPlayer = AssetsAudioPlayer();
 
+    assetsAudioPlayer.open(
+      Audio("assets/note$Sound.wav"),
+    );
+  }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,89 +20,68 @@ class XylophoneApp extends StatelessWidget {
         body: SafeArea(
           child: Column(
             children: [
-              Center(
-                child: TextButton(
-                  onPressed: () {
-                    final assetsAudioPlayer = AssetsAudioPlayer();
-
-                    assetsAudioPlayer.open(
-                      Audio("assets/note1.wav"),
-                    );
-                  },
-                  child: Text('Click me1'),
+              TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.red,// foreground
                 ),
+                onPressed: () {
+                  soundButton(1);
+                },
+                child: Text('Click me1'),
               ),
-              Center(
-                child: TextButton(
-                  onPressed: () {
-                    final assetsAudioPlayer = AssetsAudioPlayer();
-
-                    assetsAudioPlayer.open(
-                      Audio("assets/note2.wav"),
-                    );
-                  },
-                  child: Text('Click me2'),
+              TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.orange,// foreground
                 ),
+                onPressed: () {
+                  soundButton(2);
+                },
+                child: Text('Click me2'),
               ),
-              Center(
-                child: TextButton(
-                  onPressed: () {
-                    final assetsAudioPlayer = AssetsAudioPlayer();
-
-                    assetsAudioPlayer.open(
-                      Audio("assets/note3.wav"),
-                    );
-                  },
-                  child: Text('Click me3'),
+              TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.yellow,// foreground
                 ),
+                onPressed: () {
+                  soundButton(3);
+                },
+                child: Text('Click me3'),
               ),
-              Center(
-                child: TextButton(
-                  onPressed: () {
-                    final assetsAudioPlayer = AssetsAudioPlayer();
-
-                    assetsAudioPlayer.open(
-                      Audio("assets/note4.wav"),
-                    );
-                  },
-                  child: Text('Click me4'),
+              TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.green,// foreground
                 ),
+                onPressed: () {
+                  soundButton(4);
+                },
+                child: Text('Click me4'),
               ),
-              Center(
-                child: TextButton(
-                  onPressed: () {
-                    final assetsAudioPlayer = AssetsAudioPlayer();
-
-                    assetsAudioPlayer.open(
-                      Audio("assets/note5.wav"),
-                    );
-                  },
-                  child: Text('Click me5'),
+              TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.purple,// foreground
                 ),
+                onPressed: () {
+                  soundButton(5);
+                },
+                child: Text('Click me5'),
               ),
-              Center(
-                child: TextButton(
-                  onPressed: () {
-                    final assetsAudioPlayer = AssetsAudioPlayer();
-
-                    assetsAudioPlayer.open(
-                      Audio("assets/note6.wav"),
-                    );
-                  },
-                  child: Text('Click me6'),
+              TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.teal,// foreground
                 ),
+                onPressed: () {
+                  soundButton(6);
+                },
+                child: Text('Click me6'),
               ),
-              Center(
-                child: TextButton(
-                  onPressed: () {
-                    final assetsAudioPlayer = AssetsAudioPlayer();
-
-                    assetsAudioPlayer.open(
-                      Audio("assets/note7.wav"),
-                    );
-                  },
-                  child: Text('Click me7'),
+              TextButton(
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.blue,// foreground
                 ),
+                onPressed: () {
+                  soundButton(7);
+                },
+                child: Text('Click me7'),
               ),
             ],
           ),
